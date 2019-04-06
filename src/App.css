@@ -1,33 +1,119 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+html {
+  color: #333;
+  background: #f8f8f8;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+#App {
+  position: absolute;
+  width: 100vw;
+  max-width: 900px;
   min-height: 100vh;
+  padding: 10vh 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media only Screen and (min-width: 400px) {
+  #App {
+    padding: 10vh 0;
+  }
+}
+@media only Screen and (min-width: 540px) {
+  #App {
+    padding: 10vh 0;
+  }
+}
+.banner {
+  height: 6rem;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.banner__head {
+  font-family: "Roboto Slab";
+  font-size: 2rem;
+  font-weight: 700;
+}
+.banner__subhead {
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.banner:hover + .menubar:after {
+  transform: scale(3, 500);
+}
+.banner:hover + .menubar:before {
+  opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menubar {
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
 }
+.menubar:after, .menubar:before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: #b1efd8;
+  transition: all 0.15s ease-in-out;
+  z-index: -2;
+}
+.menubar:before {
+  background: #f8f8f8;
+  z-index: -1;
+  opacity: 0;
+}
+.menubar:hover:after {
+  transform: scale(3, 500);
+}
+.menubar:hover:before {
+  opacity: 1;
+}
+.menubar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 20%;
+  color: #333;
+  text-decoration: none;
+  box-shadow: 0;
+  transition: all 0.3s;
+}
+.menubar__btn:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 10px;
+  width: 80px;
+  background: #f8f8f8;
+  opacity: 0;
+  transform: translateY(20px) scaleX(0);
+  transition: all 0.2s;
+  z-index: -1;
+}
+.menubar__btn:hover:after {
+  opacity: 1;
+  transform: translateY(7px) scaleX(1);
+}
+
+/*# sourceMappingURL=app.css.map */

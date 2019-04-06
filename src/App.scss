@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+// reset
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// color variables
+$text: #333;
+$white: #f8f8f8;
+$light_grey: #e8e8e8;
+$pop: #b1efd8;
+$pop_dark: #80baa4;
+
+// font variables
+// font-size variables
+
+html{
+  color: $text;
+  background: $white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+#root{
+  display: flex;
+  justify-content: center;
+}
+
+#App{
+  position: absolute;
+  width: 100vw;
+  max-width: 900px;
+  min-height: 100vh;
+  padding:  10vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only Screen and (min-width: 400px){
+  #App{
+    padding:  10vh 0;
+  }
+}
+
+@media only Screen and (min-width: 540px){
+  #App{
+    padding:  10vh 0;
+  }
+}
+
+.banner{
+  height: 6rem;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &__head{
+    font-family: "Roboto Slab";
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &__subhead{
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &:hover + .menubar:after{
+    transform: scale(3, 500);
+  }
+  
+  &:hover + .menubar:before{
+    opacity: 1;
+  }
+}
+
+.menubar{
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+
+  &:after, &:before{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: $pop;
+    transition: all .15s ease-in-out;
+    z-index: -2;
+  }
+  
+  &:before{
+    background: $white;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &:hover:after{
+    transform: scale(3, 500);
+  }
+
+  &:hover:before{
+    opacity: 1;
+  }
+
+  &__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 1 20%;
+    color: $text;
+    text-decoration: none;
+    box-shadow: 0;
+    transition: all .3s;
+
+    &:after{
+      position: absolute;
+      display: block;
+      content: "";
+      height: 10px;
+      width: 80px;
+      background: $white;
+      opacity: 0;
+      transform: translateY(20px) scaleX(0);
+      transition: all .2s;
+      z-index: -1;
+    }
+
+    &:hover:after{
+      opacity: 1;
+      transform: translateY(7px) scaleX(1);
+    }
+  }
+}
