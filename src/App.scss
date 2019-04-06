@@ -54,7 +54,7 @@ html{
 }
 
 .banner{
-  height: 6rem;
+  height: 5rem;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@ html{
   }
 
   &__subhead{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
   }
@@ -75,7 +75,7 @@ html{
   &:hover + .menubar:after{
     transform: scale(3, 500);
   }
-  
+
   &:hover + .menubar:before{
     opacity: 1;
   }

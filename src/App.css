@@ -41,7 +41,7 @@ html {
   }
 }
 .banner {
-  height: 6rem;
+  height: 5rem;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -53,7 +53,7 @@ html {
   font-weight: 700;
 }
 .banner__subhead {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -116,4 +116,4 @@ html {
   transform: translateY(7px) scaleX(1);
 }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=App.css.map */

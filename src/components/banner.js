@@ -25,10 +25,10 @@ export class Banner extends Component{
 export class Menubar extends Component{
 render(){
   return(<div className="menubar">
-            <MenuBtn text="portfolio" />
-            <MenuBtn text="github" />
-            <MenuBtn text="codepen" />
-            <MenuBtn text="blog" />
+            <MenuBtn text="Portfolio" />
+            <MenuBtn text="Github" />
+            <MenuBtn text="Codepen" />
+            <MenuBtn text="Blog" />
         </div>)
 }
 }
