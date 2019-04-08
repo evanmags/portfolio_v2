@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class MenuBtn extends Component{
   constructor(props){
     super(props)
@@ -9,7 +8,7 @@ class MenuBtn extends Component{
     }
   }
   render(){
-    return (<a className="menubar__btn"href={this.state.href || "#"}>{this.state.text}</a>)
+    return (<a className="menubar_btn" href={this.state.href || "#"}>{this.state.text}</a>)
   }
 }
 
