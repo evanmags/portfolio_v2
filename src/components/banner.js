@@ -8,7 +8,15 @@ class MenuBtn extends Component{
     }
   }
   render(){
-    return (<a className="menubar_btn" href={this.state.href || "#"}>{this.state.text}</a>)
+    return (
+      <a 
+        id ={this.state.text} 
+        className="menubar__btn" 
+        href={this.state.href || "#"} 
+        onClick={this.state.onClick}
+      >
+        {this.state.text}
+      </a>)
   }
 }
 
@@ -22,12 +30,18 @@ export class Banner extends Component{
 }
 
 export class Menubar extends Component{
-render(){
-  return(<div className="menubar">
-            <MenuBtn text="Portfolio" />
-            <MenuBtn text="Github" />
-            <MenuBtn text="Codepen" />
-            <MenuBtn text="Blog" />
-        </div>)
-}
+  constructor(props){
+    super(props);
+    this.state = {
+      ...props
+    }
+  }
+  render(){
+    return(<div className="menubar">
+              <MenuBtn onClick={this.state.onClick} text="portfolio" />
+              <MenuBtn text="github" />
+              <MenuBtn text="codepen" />
+              <MenuBtn onClick={this.state.onClick} text="blog" />
+          </div>)
+  }
 }

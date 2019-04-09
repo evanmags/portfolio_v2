@@ -6,7 +6,7 @@ class PortfolioCard extends Component{
   }
 }
 
-export class Portfolio extends Component {
+export default class Portfolio extends Component {
   constructor(props){
     super(props);
     this.state = {}

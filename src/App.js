@@ -10,16 +10,21 @@ class App extends Component {
     this.state = {
       blog: false,
       portfolio: false
-    }
+    };
+    this.handle_menu_click = this.handle_menu_click.bind(this);
   }
   handle_menu_click(e){
-    
+    this.setState({
+      blog: false,
+      portfolio: false,
+      [e.target.id]: true,
+    })
   }
   render() {
     return (<div id="App">
       <Banner />
+      <Menubar onClick={this.handle_menu_click}/>
       {this.state.blog ? <Blog /> : this.state.portfolio ? <Portfolio /> : ''}
-      <Menubar />
       </div>)
   }
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,800');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 // reset
 *{
@@ -137,5 +137,32 @@ html{
       opacity: 1;
       transform: translateY(7px) scaleX(1);
     }
+  }
+}
+
+.blog{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__card{
+    max-width: 80ch;
+    padding: 10px 20px;
+    transition: all .3s linear;
+    &:hover{
+      box-shadow: 2px 2px 0 2px $pop;
+    }
+  }
+  &__title{
+    margin-bottom: 5px;
+    color: $pop;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  &__description{
+    margin-bottom: 5px;
+  }
+  &__length{
+    text-emphasis: italic;
   }
 }
