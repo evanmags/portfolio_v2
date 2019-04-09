@@ -162,7 +162,14 @@ html{
   &__description{
     margin-bottom: 5px;
   }
+  &__length, &__date{
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-style: italic;
+    color: #999;
+  }
   &__length{
-    text-emphasis: italic;
+    margin-bottom: 0;
+    align-self: flex-end;
   }
 }

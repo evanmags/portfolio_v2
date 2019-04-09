@@ -141,11 +141,14 @@ html {
 .blog__description {
   margin-bottom: 5px;
 }
-.blog__length {
-  align-self: flex-end;
+.blog__length, .blog__date {
+  margin-bottom: 5px;
   font-size: 14px;
   font-style: italic;
   color: #999;
+}
+.blog__length{
+  align-self: flex-end;
 }
 
 /*# sourceMappingURL=App.css.map */
