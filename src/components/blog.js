@@ -22,6 +22,18 @@ const cards = [
   description: "It was very windy but it was still a good day in my book. I did about 7 miles and it was faster than previous, similar runs. I felt ok about it but still want more.",
   length: "250 words. 4 minutes",
   date: "12/3/18"},
+  {title: "I ran Today",
+  description: "It was very windy but it was still a good day in my book. I did about 7 miles and it was faster than previous, similar runs. I felt ok about it but still want more.",
+  length: "250 words. 4 minutes",
+  date: "12/3/18"},
+  {title: "I ran Today",
+  description: "It was very windy but it was still a good day in my book. I did about 7 miles and it was faster than previous, similar runs. I felt ok about it but still want more.",
+  length: "250 words. 4 minutes",
+  date: "12/3/18"},
+  {title: "I ran Today",
+  description: "It was very windy but it was still a good day in my book. I did about 7 miles and it was faster than previous, similar runs. I felt ok about it but still want more.",
+  length: "250 words. 4 minutes",
+  date: "12/3/18"},
 ]
 class BlogCard extends Component{
   constructor(props){
