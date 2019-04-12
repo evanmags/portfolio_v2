@@ -1,8 +1,25 @@
 import React, { Component } from 'react';
 
 class PortfolioCard extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      ...props
+    }
+  }
   render(){
-    return <div></div>
+    return (<div className="blog__card">
+      <div className="card__head">
+        <h4 className="head__title">{this.state.title}</h4>
+        <span className="head__languages">{this.state.langs}</span>
+      </div>
+      <div className="card__body">
+
+      </div>
+      <div className='card__footer'>
+        <button className="card__button">See More!</button>
+      </div>
+    </div>)
   }
 }
 
