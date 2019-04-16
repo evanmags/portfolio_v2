@@ -4,11 +4,12 @@ class PortfolioCard extends Component{
   constructor(props){
     super(props)
     this.state = {
-      ...props
+      title: "Hello World",
+      langs: "HTML, CSS, JS"
     }
   }
   render(){
-    return (<div className="blog__card">
+    return (<div className="portfolio__card">
       <div className="card__head">
         <h4 className="head__title">{this.state.title}</h4>
         <span className="head__languages">{this.state.langs}</span>
@@ -26,7 +27,9 @@ class PortfolioCard extends Component{
 export default class Portfolio extends Component {
   constructor(props){
     super(props);
-    this.state = {}
+    this.state = {
+      reading: true
+    }
   }
   blog_cards(){
     // make call to cms

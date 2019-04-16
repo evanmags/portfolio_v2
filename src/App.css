@@ -31,16 +31,16 @@ html {
 
 @media only Screen and (min-width: 400px) {
   #App {
-    padding: 10vh 0;
+    padding: 5vh 0;
   }
 }
 @media only Screen and (min-width: 540px) {
   #App {
-    padding: 10vh 0;
+    padding: 5vh 0;
   }
 }
 .banner {
-  height: 5rem;
+  height: 8.5rem;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -56,10 +56,10 @@ html {
   font-weight: 300;
   text-transform: uppercase;
 }
-.banner:hover + .menubar:after {
+.banner-pop .menubar:after {
   transform: scale(3, 500);
 }
-.banner:hover + .menubar:before {
+.banner-pop .menubar:before {
   opacity: 1;
 }
 
@@ -82,12 +82,7 @@ html {
   z-index: -1;
   opacity: 0;
 }
-.menubar:hover:after {
-  transform: scale(3, 500);
-}
-.menubar:hover:before {
-  opacity: 1;
-}
+
 .menubar__btn {
   display: flex;
   justify-content: center;
@@ -148,6 +143,7 @@ html {
   color: #999;
 }
 .blog__length{
+  margin-bottom: 0;
   align-self: flex-end;
 }
 

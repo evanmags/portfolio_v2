@@ -20,15 +20,6 @@ class MenuBtn extends Component{
   }
 }
 
-export class Banner extends Component{
-  render(){
-    return(<header className="banner">
-            <h1 className="banner__head">Evan Magnussen</h1>
-            <h2 className="banner__subhead">Web Developer - Runner - Cook - Guitarist </h2>
-          </header>)
-  }
-}
-
 export class Menubar extends Component{
   constructor(props){
     super(props);
@@ -43,5 +34,32 @@ export class Menubar extends Component{
               <MenuBtn text="codepen" />
               <MenuBtn onClick={this.state.onClick} text="blog" />
           </div>)
+  }
+}
+
+export class Banner extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      ...props,
+      class: "banner"
+    };
+    this.mouseenter = this.mouseenter.bind(this);
+    this.mouseleave = this.mouseleave.bind(this);
+  }
+  mouseenter() {
+    //if (this.state.landing) {
+      this.setState({ class: "banner banner-pop" });
+    //}
+  }
+  mouseleave() {
+    this.setState({ class: "banner" });
+  }
+  render(){
+    return(<header className={this.state.class} onMouseEnter={this.mouseenter} onMouseLeave={this.mouseleave}>
+            <h1 className="banner__head">Evan Magnussen</h1>
+            <h2 className="banner__subhead">Web Developer - Runner - Cook - Guitarist </h2>
+            <Menubar onClick={this.handle_menu_click}/>
+          </header>)
   }
 }

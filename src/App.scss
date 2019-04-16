@@ -22,7 +22,6 @@ html{
   background: $white;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
-  overflow: hidden;
 }
 
 #root{
@@ -43,18 +42,18 @@ html{
 
 @media only Screen and (min-width: 400px){
   #App{
-    padding:  10vh 0;
+    padding:  5vh 0;
   }
 }
 
 @media only Screen and (min-width: 540px){
   #App{
-    padding:  10vh 0;
+    padding:  5vh 0;
   }
 }
 
 .banner{
-  height: 5rem;
+  height: 8.5rem;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -72,11 +71,11 @@ html{
     text-transform: uppercase;
   }
 
-  &:hover + .menubar:after{
+  &.pop .menubar:after{
     transform: scale(3, 500);
   }
 
-  &:hover + .menubar:before{
+  &-pop .menubar:before{
     opacity: 1;
   }
 }
@@ -100,14 +99,6 @@ html{
     background: $white;
     z-index: -1;
     opacity: 0;
-  }
-
-  &:hover:after{
-    transform: scale(3, 500);
-  }
-
-  &:hover:before{
-    opacity: 1;
   }
 
   &__btn{
@@ -147,8 +138,11 @@ html{
   align-items: center;
   &__card{
     max-width: 80ch;
-    padding: 10px 20px;
-    transition: all .3s linear;
+    margin: 10px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s linear;
     &:hover{
       box-shadow: 2px 2px 0 2px $pop;
     }

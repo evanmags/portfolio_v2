@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Banner, Menubar} from './components/banner'
+import {Banner} from './components/banner'
 import Blog from './components/blog'
 import Portfolio from './components/portfolio'
 import './App.css';
@@ -23,7 +23,6 @@ class App extends Component {
   render() {
     return (<div id="App">
       <Banner />
-      <Menubar onClick={this.handle_menu_click}/>
       {this.state.blog ? <Blog /> : this.state.portfolio ? <Portfolio /> : ''}
       </div>)
   }
