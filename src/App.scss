@@ -71,12 +71,16 @@ html{
     text-transform: uppercase;
   }
 
-  &.pop .menubar:after{
+  &-pop .menubar:after{
     transform: scale(3, 500);
   }
 
   &-pop .menubar:before{
     opacity: 1;
+  }
+
+  &-pop .menubar__btn:after{
+    background: $white;
   }
 }
 
@@ -117,8 +121,8 @@ html{
       content: "";
       height: 10px;
       width: 80px;
-      background: $white;
       opacity: 0;
+      background: $pop;
       transform: translateY(20px) scaleX(0);
       transition: all .2s;
       z-index: -1;
@@ -165,5 +169,34 @@ html{
   &__length{
     margin-bottom: 0;
     align-self: flex-end;
+  }
+}
+
+.portfolio{
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  &__card{
+    margin: 10px;
+    padding: 15px 20px;
+    box-shadow: 2px 2px 0 2px $pop;
+    display: flex;
+  }
+}
+
+.card{
+  &__image{
+    flex: 30%;
+  }
+  &__body{
+    display: flex;
+    flex-direction: column;
+  }
+  &__title{
+    margin-bottom: 5px;
+    color: $pop;
+    text-transform: uppercase;
+    font-weight: 800;
   }
 }

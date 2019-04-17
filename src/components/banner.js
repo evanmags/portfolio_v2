@@ -47,10 +47,13 @@ export class Banner extends Component{
     this.mouseenter = this.mouseenter.bind(this);
     this.mouseleave = this.mouseleave.bind(this);
   }
+  componentWillReceiveProps(props){
+    this.setState({...props})
+  }
   mouseenter() {
-    //if (this.state.landing) {
+    if (this.state.landing) {
       this.setState({ class: "banner banner-pop" });
-    //}
+    }
   }
   mouseleave() {
     this.setState({ class: "banner" });
@@ -59,7 +62,7 @@ export class Banner extends Component{
     return(<header className={this.state.class} onMouseEnter={this.mouseenter} onMouseLeave={this.mouseleave}>
             <h1 className="banner__head">Evan Magnussen</h1>
             <h2 className="banner__subhead">Web Developer - Runner - Cook - Guitarist </h2>
-            <Menubar onClick={this.handle_menu_click}/>
+            <Menubar onClick={this.state.onClick}/>
           </header>)
   }
 }
