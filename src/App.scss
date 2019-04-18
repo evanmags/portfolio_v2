@@ -180,7 +180,7 @@ html{
   &__card{
     margin: 10px;
     padding: 15px 20px;
-    box-shadow: 2px 2px 0 2px $pop;
+    box-shadow: 2px 2px 0 2px $pop, 0 0 5px $text;
     display: flex;
   }
 }
@@ -198,5 +198,8 @@ html{
     color: $pop;
     text-transform: uppercase;
     font-weight: 800;
+  }
+  &__button{
+    padding: 10px;
   }
 }
