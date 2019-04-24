@@ -179,40 +179,44 @@ html {
   font-weight: 800;
 }
 
+.card__languages{
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-style: italic;
+  color: #999;
+}
+
 .card__footer{
+  padding: 10px 0;
   display: flex;
   justify-content: flex-end;
 }
 
 .card__button{
-  margin: 0   8px;
+  margin: 0 10px;
+  height: 15px;
   background: transparent;
   border: none;
-}
-
-.card__button:after, .card__button:before{
-  position: relative;
-  content: '';
-  display: block;
-  left: -10%;
-  height: 12px;
-  width: 120%;
-  background: #b1efd8;
-  transform: scaleX(0);
-  transition: .2s;
-  z-index: -1;
+  border-radius: 0px;
+  font-size: 12px; 
 }
 
 .card__button:after{
+  position: relative;
+  content: '';
+  display: block;
+  height: 10px;
+  width: 120%;
+  bottom: 8px;
+  left: -10%;
+  background: #b1efd8;
+  transform: scaleX(0);
+  transition: .2s;
   transform-origin: left;
-  bottom: 7px
-}
-.card__button:before{
-  transform-origin: right;
-  top: 7px;
+  z-index: -1;
 }
 
-.card__button:hover:before, .card__button:hover:after{
+.card__button:hover:after{
   transform: scaleX(1);
 }
-/*# sourceMappingURL=app.css.map */
+/* # sourceMappingURL=app.css.map */

@@ -6,7 +6,9 @@ const portfolio_projects = [
     langs: "JavaScript",
     image: "",
     description:
-      'Curly was the brain child of working my way through learning React. This project started as a simple "put things on the page" idea and an exploratin in design and structure of software and how modern web frameworks function. While this project is not up to par with the likes of React, Vue, or Angular, it is something I am very proud of.'
+      `Curly was the result of working my way through learning React. This project started as a simple "put things on the page" idea and an exploration of the DOM. As well Curly is an exploratin in the design and structure of software and how modern web frameworks function. While this project is not up to par with the likes of React, Vue, or Angular, it is something I am very proud of.
+      Starting simply, Curly allows you to build websites/apps using nothing but structured JavaScript objects. These objects are completely self contained, incorporating styling, events, and anything else you could imagine. Because they are JavaScript objects you can use all of the functionality of JavaScript in your styling as well.
+      Please have a look at the documentation for more information and explore the sandbox to get a taste for how building works.`
     
   },
   {
