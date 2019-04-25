@@ -5,11 +5,9 @@ const portfolio_projects = [
     name: "Curly.js",
     langs: "JavaScript",
     image: "",
-    description:
-      `Curly was the result of working my way through learning React. This project started as a simple "put things on the page" idea and an exploration of the DOM. As well Curly is an exploratin in the design and structure of software and how modern web frameworks function. While this project is not up to par with the likes of React, Vue, or Angular, it is something I am very proud of.
+    description: `Curly was the result of working my way through learning React. This project started as a simple "put things on the page" idea and an exploration of the DOM. As well Curly is an exploratin in the design and structure of software and how modern web frameworks function. While this project is not up to par with the likes of React, Vue, or Angular, it is something I am very proud of.
       Starting simply, Curly allows you to build websites/apps using nothing but structured JavaScript objects. These objects are completely self contained, incorporating styling, events, and anything else you could imagine. Because they are JavaScript objects you can use all of the functionality of JavaScript in your styling as well.
       Please have a look at the documentation for more information and explore the sandbox to get a taste for how building works.`
-    
   },
   {
     name: "ParkView",
@@ -23,7 +21,13 @@ const portfolio_projects = [
     image: "",
     description: ""
   },
-  { name: "Pixelator", langs: "React", image: "", description: "This was my first ever React project. A fun implementation of a pixel art editor that takes inspireation from the Etch-a-Sketch." },
+  {
+    name: "Pixelator",
+    langs: "React",
+    image: "",
+    description:
+      "This was my first ever React project. A fun implementation of a pixel art editor that takes inspireation from the Etch-a-Sketch."
+  }
 ];
 
 class PortfolioCard extends Component {
@@ -60,16 +64,17 @@ export default class Portfolio extends Component {
     this.state = {
       reading: true
     };
-    this.portfolio_cards = this.portfolio_cards.bind(this)
+    this.portfolio_cards = this.portfolio_cards.bind(this);
   }
   portfolio_cards() {
-    return portfolio_projects.map(e => {
+    return portfolio_projects.map(project => {
       return (
         <PortfolioCard
-          name={e.name}
-          langs={e.langs}
-          image={e.image}
-          description={e.description}
+          key={project.name}
+          name={project.name}
+          langs={project.langs}
+          image={project.image}
+          description={project.description}
         />
       );
     });
@@ -77,7 +82,7 @@ export default class Portfolio extends Component {
   render() {
     return (
       <div className="portfolio">
-        {this.state.reading ? this.portfolio_cards() : ''}
+        {this.state.reading && this.portfolio_cards()}
       </div>
     );
   }
