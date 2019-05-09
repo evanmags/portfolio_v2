@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
+const cards = require('../data.json').blog.posts;
 
 class BlogPost extends Component{
   render(){
     return <div></div>
   }
 }
-const cards = [
-  {title: "I ran Today",
-  description: "It was very windy but it was still a good day in my book. I did about 7 miles and it was faster than previous, similar runs. I felt ok about it but still want more.",
-  length: "250 words. 4 minutes",
-  date: "12/3/18"}
-]
 
 function BlogCard(props){
   return (<div className="blog__card">

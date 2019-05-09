@@ -156,8 +156,7 @@ html {
   align-items: stretch;
 }
 .portfolio__card {
-  min-height: 400px;
-  margin: 20px 0;
+  margin: 10px;
   padding: 15px 20px;
   box-shadow: 2px 2px 0 2px #b1efd8;
   display: flex;
@@ -174,36 +173,39 @@ html {
 }
 .card__title {
   margin-bottom: 5px;
-  color: #b1efd8;
+  font-family: "Roboto Slab";
   text-transform: uppercase;
   font-weight: 800;
 }
-
-.card__languages{
+.card__languages {
   margin-bottom: 5px;
   font-size: 14px;
   font-style: italic;
   color: #999;
 }
-
-.card__footer{
+.card__description {
+  margin: 15px 0;
+}
+.card__description p {
+  margin: 10px 0;
+}
+.card__footer {
   padding: 10px 0;
   display: flex;
   justify-content: flex-end;
 }
-
-.card__button{
+.card__button {
   margin: 0 10px;
   height: 15px;
   background: transparent;
   border: none;
   border-radius: 0px;
-  font-size: 12px; 
+  font-size: 14px;
+  outline: none;
 }
-
-.card__button:after{
+.card__button:after {
   position: relative;
-  content: '';
+  content: "";
   display: block;
   height: 10px;
   width: 120%;
@@ -211,12 +213,12 @@ html {
   left: -10%;
   background: #b1efd8;
   transform: scaleX(0);
-  transition: .2s;
+  transition: 0.2s;
   transform-origin: left;
   z-index: -1;
 }
-
-.card__button:hover:after{
+.card__button:hover:after {
   transform: scaleX(1);
 }
-/* # sourceMappingURL=app.css.map */
+
+/*# sourceMappingURL=App.css.map */
