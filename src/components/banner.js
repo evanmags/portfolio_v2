@@ -54,7 +54,7 @@ export class Banner extends Component {
       >
         <h1 className="banner__head">Evan Magnussen</h1>
         <h2 className="banner__subhead">
-          Web Developer - Runner - Cook - Guitarist{" "}
+          Web Developer - Runner - Cook - Guitarist
         </h2>
         <Menubar />
       </header>
