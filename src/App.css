@@ -23,7 +23,7 @@ html {
   width: 100vw;
   max-width: 900px;
   min-height: 100vh;
-  padding: 10vh 0;
+  padding: 0 5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,12 +31,12 @@ html {
 
 @media only Screen and (min-width: 400px) {
   #App {
-    padding: 5vh 0;
+    padding: 0 3vh;
   }
 }
-@media only Screen and (min-width: 540px) {
+@media only Screen and (min-width: 800px) {
   #App {
-    padding: 5vh 0;
+    padding: 0;
   }
 }
 .banner {
@@ -69,13 +69,14 @@ html {
 .menubar {
   height: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .menubar:after, .menubar:before {
   position: absolute;
   content: "";
   height: 3px;
-  width: 100%;
+  width: calc(100% - 10vh);
   background: #b1efd8;
   transition: all 0.15s ease-in-out;
   z-index: -2;
@@ -89,10 +90,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 0 1 20%;
+  flex: 0 1 40%;
   color: #333;
   text-decoration: none;
-  box-shadow: 0;
+  box-shadow: none;
   transition: all 0.3s;
 }
 .menubar__btn:after {
@@ -112,6 +113,26 @@ html {
   transform: translateY(7px) scaleX(1);
 }
 
+@media only Screen and (min-width: 400px) {
+  .menubar:after, .menubar:before {
+    width: calc(100% - 6vh);
+  }
+  .menubar__btn {
+    margin: 10px 0;
+    flex: 0 1 50%;
+  }
+}
+@media only Screen and (min-width: 800px) {
+  .menubar {
+    flex-wrap: nowrap;
+  }
+  .menubar:after, .menubar:before {
+    width: 100%;
+  }
+  .menubar__btn {
+    flex: 0 1 20%;
+  }
+}
 .blog {
   padding: 30px;
   display: flex;
@@ -201,7 +222,7 @@ html {
   border: none;
   border-radius: 0px;
   font-size: 14px;
-  outline: none;
+  outline: #999;
 }
 .card__button:after {
   position: relative;

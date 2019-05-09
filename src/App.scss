@@ -34,7 +34,7 @@ html{
   width: 100vw;
   max-width: 900px;
   min-height: 100vh;
-  padding:  10vh 0;
+  padding:  0 5vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,13 +42,13 @@ html{
 
 @media only Screen and (min-width: 400px){
   #App{
-    padding:  5vh 0;
+    padding:  0 3vh;
   }
 }
 
-@media only Screen and (min-width: 540px){
+@media only Screen and (min-width: 800px){
   #App{
-    padding:  5vh 0;
+    padding: 0;
   }
 }
 
@@ -87,13 +87,14 @@ html{
 .menubar{
   height: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 
   &:after, &:before{
     position: absolute;
     content: '';
     height: 3px;
-    width: 100%;
+    width: calc(100% - 10vh);
     background: $pop;
     transition: all .15s ease-in-out;
     z-index: -2;
@@ -109,10 +110,10 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 0 1 20%;
+    flex: 0 1 40%;
     color: $text;
     text-decoration: none;
-    box-shadow: 0;
+    box-shadow: none;
     transition: all .3s;
 
     &:after{
@@ -131,6 +132,30 @@ html{
     &:hover:after{
       opacity: 1;
       transform: translateY(7px) scaleX(1);
+    }
+  }
+}
+
+@media only Screen and (min-width: 400px){
+  .menubar{
+    &:after, &:before{
+      width: calc(100% - 6vh);
+    }
+    &__btn{
+      margin: 10px 0;
+      flex: 0 1 50%;
+    }
+  }
+}
+
+@media only Screen and (min-width: 800px){
+  .menubar{
+    flex-wrap: nowrap;
+    &:after, &:before{
+      width: 100%;
+    }
+    &__btn{
+      flex: 0 1 20%;
     }
   }
 }

@@ -17,7 +17,7 @@ function MenuBtn(props) {
   }
 }
 
-export function Menubar(props) {
+function Menubar(props) {
   return (
     <div className="menubar">
       <MenuBtn text="portfolio" href="/portfolio" internal={true} />
