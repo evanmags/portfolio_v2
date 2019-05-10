@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import isMobile from "../mobiledetect";
 
 function MenuBtn(props) {
   if (props.internal) {
@@ -38,7 +39,7 @@ export class Banner extends Component {
     this.mouseleave = this.mouseleave.bind(this);
   }
   mouseenter() {
-    if (window.location.pathname === "/") {
+    if (window.location.pathname === "/" && !isMobile.any()) {
       this.setState({ class: "banner banner-pop" });
     }
   }

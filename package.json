@@ -4,6 +4,7 @@
   "homepage": "http://evanmags.github.io/portfolio_v2",
   "private": true,
   "dependencies": {
+    "mobile-detect": "^1.4.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
