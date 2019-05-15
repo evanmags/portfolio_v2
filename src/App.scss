@@ -165,36 +165,6 @@ html{
   display: flex;
   flex-direction: column;
   align-items: center;
-  &__card{
-    max-width: 80ch;
-    margin: 10px;
-    padding: 15px 20px;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s linear;
-    &:hover{
-      box-shadow: 2px 2px 0 2px $pop;
-    }
-  }
-  &__title{
-    margin-bottom: 5px;
-    color: $pop;
-    text-transform: uppercase;
-    font-weight: 800;
-  }
-  &__description{
-    margin-bottom: 5px;
-  }
-  &__length, &__date{
-    margin-bottom: 5px;
-    font-size: 14px;
-    font-style: italic;
-    color: #999;
-  }
-  &__length{
-    margin-bottom: 0;
-    align-self: flex-end;
-  }
 }
 
 .portfolio{
@@ -202,15 +172,13 @@ html{
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  &__card{
-    margin: 10px;
-    padding: 15px 20px;
-    box-shadow: 2px 2px 0 2px $pop;
-    display: flex;
-  }
 }
 
 .card{
+  margin: 10px;
+  padding: 15px 20px;
+  box-shadow: 2px 2px 0 2px $pop;
+  display: flex;
   &__image{
     flex: 30%;
   }
@@ -226,11 +194,14 @@ html{
     text-transform: uppercase;
     font-weight: 800;
   }
-  &__languages{
+  &__info{
     margin-bottom: 5px;
     font-size: 14px;
     font-style: italic;
     color: #999;
+    &-right{
+      align-self: flex-end;
+    }
   }
   &__description{
     margin: 15px 0;

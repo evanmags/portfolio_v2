@@ -39,7 +39,7 @@ export class Banner extends Component {
     this.mouseleave = this.mouseleave.bind(this);
   }
   mouseenter() {
-    if (window.location.pathname === "/" && !isMobile.any()) {
+    if (window.location.pathname === `${process.env.PUBLIC_URL}/` && !isMobile.any()) {
       this.setState({ class: "banner banner-pop" });
     }
   }
