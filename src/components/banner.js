@@ -22,9 +22,10 @@ function Menubar(props) {
   return (
     <div className="menubar">
       <MenuBtn text="portfolio" href="/portfolio" internal={true} />
+      <MenuBtn text="resume" href="/resume" internal={true} />
       <MenuBtn text="github" href="https://github.com/evanmags" />
       <MenuBtn text="codepen" href="https://codepen.io/emags112/" />
-      <MenuBtn text="ramblings" href="/blog" internal={true} />
+      {/* <MenuBtn text="ramblings" href="/blog" internal={true} /> */}
     </div>
   );
 }

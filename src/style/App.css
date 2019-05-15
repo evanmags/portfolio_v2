@@ -87,6 +87,7 @@ html {
   opacity: 0;
 }
 .menubar__btn {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,7 +102,7 @@ html {
   display: block;
   content: "";
   height: 10px;
-  width: 80px;
+  width: 40%;
   opacity: 0;
   background: #b1efd8;
   transform: translateY(20px) scaleX(0);

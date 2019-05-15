@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import { Banner } from "./components/banner";
 import Blog from "./components/blog";
 import Portfolio from "./components/portfolio";
-import "./App.css";
+import "./style/App.css";
 
 class App extends Component {
   render() {
@@ -13,6 +13,7 @@ class App extends Component {
         <Switch>
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/blog" component={Blog} />
+          <Route path="/resume" component={null} />
         </Switch>
       </div>
     );
