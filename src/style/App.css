@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-.resume, .portfolio, .blog, .banner, #App {
+.resume, .card__description, .portfolio, .blog, .banner, #App {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,6 +397,7 @@ html {
 .contact__method {
   -ms-flex-item-align: start;
   align-self: flex-start;
+  flex-grow: 0;
 }
 .contact__method a {
   position: relative;

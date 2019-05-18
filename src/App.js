@@ -4,6 +4,7 @@ import Banner from "./components/banner";
 import Blog from "./components/blog";
 import Portfolio from "./components/portfolio";
 import Resume from "./components/resume";
+import Footer from "./components/footer";
 import "./style/App.css";
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path="/blog" component={Blog} />
           <Route path="/resume" component={Resume} />
         </Switch>
+        <Footer />
       </div>
     );
   }

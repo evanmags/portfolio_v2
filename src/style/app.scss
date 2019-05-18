@@ -273,6 +273,7 @@ html {
     }
   }
   &__description {
+    @extend %flex-column;
     padding: 0 10px;
     margin: 0 0 5px 0;
     & p {
@@ -429,6 +430,7 @@ html {
 .contact__method{
   -ms-flex-item-align: start;
       align-self: flex-start;
+  flex-grow: 0;
   & a {
     position: relative;
     text-decoration: none;
