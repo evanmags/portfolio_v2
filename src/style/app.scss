@@ -29,7 +29,8 @@ html {
   color: $text;
   background: $white;
   font-family: $body, sans-serif;
-  font-size: 16px;}
+  font-size: 16px;
+}
 
 #root {
   min-height: 100vh;
@@ -106,6 +107,7 @@ html {
     opacity: 0;
   }
   &__btn {
+    margin: 5px 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -171,15 +173,27 @@ html {
 }
 
 .portfolio {
-  padding: 30px;
+  padding: 0px;
   padding-top: 0;
   @extend %flex-column;
   align-items: stretch;
 }
 
+@media only Screen and (min-width: 400px) {
+  .portfolio {
+    padding: 15px;
+  }
+}
+
+@media only Screen and (min-width: 800px) {
+  .portfolio {
+    padding: 30px;
+  }
+}
+
 .card {
   margin: 10px;
-  padding: 15px 20px;
+  padding: 5px 0;
   box-shadow: 2px 2px 0 2px $pop;
   display: flex;
   &__image {
@@ -187,7 +201,6 @@ html {
   }
   &__body {
     flex: 70%;
-    @extend %flex-column;
     justify-content: flex-start;
   }
   &__title {
@@ -206,8 +219,7 @@ html {
     }
   }
   &__description {
-    @extend %flex-column;
-    padding: 0 15px;
+    padding: 0 10px;
     margin: 0 0 5px 0;
     & p {
       margin: 10px 0;
@@ -252,6 +264,21 @@ html {
   }
 }
 
+@media only Screen and (min-width: 400px) {
+  .card {
+    padding: 15px 20px;
+    &__description {
+      padding: 0 10px;
+    }
+  }
+}
+
+@media only Screen and (min-width: 800px) {
+  .card__description {
+    padding: 0 15px;
+  }
+}
+
 .resume {
   @extend %flex-column;
   justify-content: center;
@@ -274,26 +301,38 @@ html {
   & .card{
     box-shadow: none;
   }
-  & .divider {
-    background: $pop;
-    margin: 10px 0;
-    &-horizontal{
-      margin: 10px auto;
-      align-self: center;
-      height: 3px;
-      width: 85%;
-    }
-    &-vertical{
-      flex: 0 0 3px;
-    }
+}
+
+.divider {
+  background: $pop;
+  margin: 10px 0;
+  &-horizontal{
+    margin: 10px auto;
+    align-self: center;
+    height: 3px;
+    width: 90%;
   }
-  & .row{
-    position: relative;
-    display: flex;
-    width: 100%;
-    & .card {
-      flex: 0 0 50%;
-    }
+  &-vertical{
+    flex: 0 0 3px;
+  }
+}
+
+.row{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  & .card {
+    flex: 0 0 50%;
+  }
+}
+
+@media only Screen and (min-width: 800px) {
+  .row {
+    flex-direction: row;
+  }
+  .divider-horizontal{
+    width: 85%;
   }
 }
 

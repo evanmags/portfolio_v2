@@ -35,7 +35,8 @@
           {"text": "live_link", "href": "https://evanmags.github.io/Colors-2/"},
           {"text": "github", "href": "https://github.com/evanmags/Colors-2"}
         ],
-        "description": ["This project was the very first that I ever built, and also the first that I decided to revamp when learning React. Colors is a color pallet building tool that allows fine tuning of a generated split complimentary color pallet."]
+        "description": ["This project was the very first that I ever built, and also the first that I decided to revamp when learning React. Colors is a color pallet building tool that allows fine tuning of a generated split complimentary color pallet.",
+        "This application was very helpful in solidifying the object-oriented nature of React and JavaScript in general. As well, this application also helped to make the concepts surrounding state management (state flowing in one direction and only present where needed) more clear. All of this has helped to make the poisbility of larger applications a possibility."]
       },
       {
         "name": "Pixelator",
@@ -131,7 +132,7 @@
       },
       { "skill": "HTML", "subskills": ["Pug", "EJS", "Jinja"] },
       { "skill": "Database", "subskills": ["MongoDB", "SQL", "graphQL"] },
-      { "skill": "Other", "subskills": ["Git", "JSON", "Java", "C"] }
+      { "skill": "Other", "subskills": ["Git", "JSON", "REST", "Java", "C"] }
     ],
     "contact": [
       {
@@ -152,6 +153,12 @@
         "icon": "fab fa-codepen",
         "method": "@emags112",
         "href": "https://codepen.io/emags112/"
+      },
+      {
+        "type": "linkedin",
+        "icon": "fab fa-linkedin",
+        "method": "evanmagnussen",
+        "href": "https://www.linkedin.com/in/evanmagnussen"
       }
     ]
   }

@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.resume, .card__description, .card__body, .portfolio, .blog, .banner, #App {
+.resume, .portfolio, .blog, .banner, #App {
   display: flex;
   flex-direction: column;
 }
@@ -89,6 +89,7 @@ html {
   opacity: 0;
 }
 .menubar__btn {
+  margin: 5px 0;
   position: relative;
   display: flex;
   justify-content: center;
@@ -146,14 +147,24 @@ html {
 }
 
 .portfolio {
-  padding: 30px;
+  padding: 0px;
   padding-top: 0;
   align-items: stretch;
 }
 
+@media only Screen and (min-width: 400px) {
+  .portfolio {
+    padding: 15px;
+  }
+}
+@media only Screen and (min-width: 800px) {
+  .portfolio {
+    padding: 30px;
+  }
+}
 .card {
   margin: 10px;
-  padding: 15px 20px;
+  padding: 5px 0;
   box-shadow: 2px 2px 0 2px #b1efd8;
   display: flex;
 }
@@ -180,7 +191,7 @@ html {
   align-self: flex-end;
 }
 .card__description {
-  padding: 0 15px;
+  padding: 0 10px;
   margin: 0 0 5px 0;
 }
 .card__description p {
@@ -224,6 +235,19 @@ html {
   transform: scaleX(1);
 }
 
+@media only Screen and (min-width: 400px) {
+  .card {
+    padding: 15px 20px;
+  }
+  .card__description {
+    padding: 0 10px;
+  }
+}
+@media only Screen and (min-width: 800px) {
+  .card__description {
+    padding: 0 15px;
+  }
+}
 .resume {
   justify-content: center;
   align-items: center;
@@ -246,28 +270,40 @@ html {
 .resume .card {
   box-shadow: none;
 }
-.resume .divider {
+
+.divider {
   background: #b1efd8;
   margin: 10px 0;
 }
-.resume .divider-horizontal {
+.divider-horizontal {
   margin: 10px auto;
   align-self: center;
   height: 3px;
-  width: 85%;
+  width: 90%;
 }
-.resume .divider-vertical {
+.divider-vertical {
   flex: 0 0 3px;
 }
-.resume .row {
+
+.row {
   position: relative;
   display: flex;
+  flex-direction: column;
   width: 100%;
 }
-.resume .row .card {
+.row .card {
   flex: 0 0 50%;
 }
 
+@media only Screen and (min-width: 800px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .divider-horizontal {
+    width: 85%;
+  }
+}
 .contact__method {
   align-self: flex-start;
 }
