@@ -9,6 +9,7 @@
 
 // color variables
 $text: #333;
+$text_muted: #767676;
 $white: #f8f8f8;
 $light_grey: #e8e8e8;
 $pop: #b1efd8;
@@ -32,18 +33,20 @@ html {
 }
 
 #root {
+  min-height: 100vh;
+  padding: 5vh 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #App {
-  position: absolute;
+  position: relative;
   width: 100vw;
   max-width: 900px;
-  min-height: 100vh;
   padding: 0 5vh;
   @extend %flex-column;
-  justify-content: center;
+  overflow: hidden;
 }
 
 @media only Screen and (min-width: 400px) {
@@ -130,6 +133,10 @@ html {
       opacity: 1;
       transform: translateY(7px) scaleX(1);
     }
+    &:focus:after {
+      opacity: 1;
+      transform: translateY(7px) scaleX(1);
+    }
   }
 }
 
@@ -167,6 +174,7 @@ html {
 
 .portfolio {
   padding: 30px;
+  padding-top: 0;
   @extend %flex-column;
   align-items: stretch;
 }
@@ -182,7 +190,7 @@ html {
   &__body {
     flex: 70%;
     @extend %flex-column;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   &__title {
     margin-bottom: 5px;
@@ -194,13 +202,15 @@ html {
     margin-bottom: 5px;
     font-size: 14px;
     font-style: italic;
-    color: #999;
+    color: $text_muted;
     &-right {
       align-self: flex-end;
     }
   }
   &__description {
-    margin: 15px 0;
+    @extend %flex-column;
+    padding: 0 15px;
+    margin: 0 0 5px 0;
     & p {
       margin: 10px 0;
     }
@@ -211,21 +221,24 @@ html {
     justify-content: flex-end;
   }
   &__button {
+    color: $text;
+    text-decoration: none;
+    text-transform: capitalize;
     margin: 0 10px;
     height: 15px;
     background: transparent;
     border: none;
     border-radius: 0px;
     font-size: 14px;
-    outline: #999;
+    outline: $text_muted;
     &:after {
       position: relative;
       content: "";
       display: block;
       height: 10px;
-      width: 120%;
+      width: calc(100% + 10px);
       bottom: 8px;
-      left: -10%;
+      left: -5px;
       background: $pop;
       transform: scaleX(0);
       transition: 0.2s;
@@ -233,6 +246,9 @@ html {
       z-index: -1;
     }
     &:hover:after {
+      transform: scaleX(1);
+    }
+    &:focus:after {
       transform: scaleX(1);
     }
   }
@@ -245,7 +261,6 @@ html {
   position: relative;
   &__item{
     margin: 5px 0;
-    flex: 0 0 100%;
     display: flex;
     flex-direction: column;
     &__title{
@@ -255,7 +270,7 @@ html {
       display: flex;
       justify-content: space-between;
       font-style: italic;
-      color: #999;
+      color: $text_muted;
     }
   }
   & .card{
@@ -281,5 +296,37 @@ html {
     & .card {
       flex: 0 0 50%;
     }
+  }
+}
+
+.contact__method{
+  align-self: flex-start;
+  & a {
+    position: relative;
+    text-decoration: none;
+    color: $text;
+    &:after {
+      position: relative;
+      content: "";
+      display: block;
+      height: 10px;
+      width: calc(100% + 20px);
+      bottom: 8px;
+      left: -10px;
+      background: $pop;
+      transform: scaleX(0);
+      transition: 0.2s;
+      transform-origin: left;
+      z-index: -1;
+    }
+    &:hover:after {
+      transform: scaleX(1);
+    }
+    &:focus:after {
+      transform: scaleX(1);
+    }
+  }
+  & i{
+    margin-right: 5px;
   }
 }

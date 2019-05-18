@@ -21,8 +21,8 @@ function CardInfo(props) {
 
 function CardLink(props) {
   return (
-    <a href={props.href}>
-      <button className="card__button">{props.text}</button>
+    <a className="card__button" href={props.href} target="_blank" rel="noopener noreferrer">
+      {props.text}
     </a>
   );
 }
@@ -31,14 +31,8 @@ function CardFooter(props) {
   return props.links 
     ? (
       <div className="card__footer">
-        {props.links.live_link && (
-          <CardLink href={props.links.live_link} text="Live Site" />
-        )}
-        {props.links.github && (
-          <CardLink href={props.links.github} text="GitHub" />
-        )}
-        {props.links.post && (
-          <CardLink href={props.links.post} text="Read More!" />
+        {props.links.map(link => 
+          <CardLink text={link.text.replace(/_/g, ' ')} href={link.href} key={link.text}/>
         )}
       </div>
     ) 
@@ -46,7 +40,7 @@ function CardFooter(props) {
 }
 
 class Card extends Component {
-  render(props) {
+  render() {
     return (
       <div className="card">
         {this.props.image && (
@@ -55,7 +49,7 @@ class Card extends Component {
         <div className="card__body">
           <CardHead
             title={this.props.title}
-            info={this.props.date || this.props.langs}
+            info={this.props.date || this.props.tech}
           />
           <div className="card__description">{this.props.description}</div>
           <CardInfo info={this.props.length} right={true} />

@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.resume, .card__body, .portfolio, .blog, .banner, #App {
+.resume, .card__description, .card__body, .portfolio, .blog, .banner, #App {
   display: flex;
   flex-direction: column;
 }
@@ -19,17 +19,19 @@ html {
 }
 
 #root {
+  min-height: 100vh;
+  padding: 5vh 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #App {
-  position: absolute;
+  position: relative;
   width: 100vw;
   max-width: 900px;
-  min-height: 100vh;
   padding: 0 5vh;
-  justify-content: center;
+  overflow: hidden;
 }
 
 @media only Screen and (min-width: 400px) {
@@ -114,6 +116,10 @@ html {
   opacity: 1;
   transform: translateY(7px) scaleX(1);
 }
+.menubar__btn:focus:after {
+  opacity: 1;
+  transform: translateY(7px) scaleX(1);
+}
 
 @media only Screen and (min-width: 400px) {
   .menubar:after, .menubar:before {
@@ -142,6 +148,7 @@ html {
 
 .portfolio {
   padding: 30px;
+  padding-top: 0;
   align-items: stretch;
 }
 
@@ -156,7 +163,7 @@ html {
 }
 .card__body {
   flex: 70%;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .card__title {
   margin-bottom: 5px;
@@ -168,13 +175,14 @@ html {
   margin-bottom: 5px;
   font-size: 14px;
   font-style: italic;
-  color: #999;
+  color: #767676;
 }
 .card__info-right {
   align-self: flex-end;
 }
 .card__description {
-  margin: 15px 0;
+  padding: 0 15px;
+  margin: 0 0 5px 0;
 }
 .card__description p {
   margin: 10px 0;
@@ -185,22 +193,25 @@ html {
   justify-content: flex-end;
 }
 .card__button {
+  color: #333;
+  text-decoration: none;
+  text-transform: capitalize;
   margin: 0 10px;
   height: 15px;
   background: transparent;
   border: none;
   border-radius: 0px;
   font-size: 14px;
-  outline: #999;
+  outline: #767676;
 }
 .card__button:after {
   position: relative;
   content: "";
   display: block;
   height: 10px;
-  width: 120%;
+  width: calc(100% + 10px);
   bottom: 8px;
-  left: -10%;
+  left: -5px;
   background: #b1efd8;
   transform: scaleX(0);
   transition: 0.2s;
@@ -208,6 +219,9 @@ html {
   z-index: -1;
 }
 .card__button:hover:after {
+  transform: scaleX(1);
+}
+.card__button:focus:after {
   transform: scaleX(1);
 }
 
@@ -218,7 +232,6 @@ html {
 }
 .resume__item {
   margin: 5px 0;
-  flex: 0 0 100%;
   display: flex;
   flex-direction: column;
 }
@@ -229,7 +242,7 @@ html {
   display: flex;
   justify-content: space-between;
   font-style: italic;
-  color: #999;
+  color: #767676;
 }
 .resume .card {
   box-shadow: none;
@@ -254,6 +267,38 @@ html {
 }
 .resume .row .card {
   flex: 0 0 50%;
+}
+
+.contact__method {
+  align-self: flex-start;
+}
+.contact__method a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+}
+.contact__method a:after {
+  position: relative;
+  content: "";
+  display: block;
+  height: 10px;
+  width: calc(100% + 20px);
+  bottom: 8px;
+  left: -10px;
+  background: #b1efd8;
+  transform: scaleX(0);
+  transition: 0.2s;
+  transform-origin: left;
+  z-index: -1;
+}
+.contact__method a:hover:after {
+  transform: scaleX(1);
+}
+.contact__method a:focus:after {
+  transform: scaleX(1);
+}
+.contact__method i {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=App.css.map */

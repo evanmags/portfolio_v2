@@ -3,21 +3,24 @@
     "projects": [
       {
         "name": "Snippets",
-        "langs": "JavaScript, Node.js, graphQL, mongoDB",
-        "links": {
-          "github": "https://github.com/evanmags/snippets"
-        },
+        "tech": "JavaScript, Node.js, graphQL, mongoDB",
+        "links": [
+          {"text": "github", "href": "https://github.com/evanmags/snippets"}
+        ],
         "description": [
-          "Snippets is a command line tool for storing and accessing all of your code snippets from one place.", "Inspired by a reddit post about storing code snippets this project has proven a fantastic opportunity to get in depth with node.js and graphQL.", "Currently in development, this application will interact with a dedicated server storing snippets as minified blobs in a database, then appending them to the file you are currently working on when accessed."
+          "Snippets is a command line tool for storing and accessing all of your code snippets from one place.",
+          "Inspired by a reddit post about storing code snippets this project has proven a fantastic opportunity to get in depth with node.js and graphQL.",
+          "Currently in development, this application will interact with a dedicated server storing snippets as minified blobs in a database, then appending them to the file you are currently working on when accessed."
         ]
       },
       {
         "name": "Curly.js",
-        "langs": "JavaScript",
-        "links":{
-          "github": "https://github.com/evanmags/Curly.js",
-          "live_link": "https://evanmags.github.io/curly.js-docs"
-        },
+        "tech": "JavaScript",
+        "links": [
+          {"text": "live_link", "href": "https://github.com/evanmags/Curly.js"},
+          {"text": "playground", "href": "https://codepen.io/emags112/pen/Jzvjbz"},
+          {"text": "github", "href": "https://evanmags.github.io/curly.js-docs"}
+        ],
         "description": [
           "Curly was the result of working my way through learning React. This project started as a simple 'put things on the page' idea and an exploration of the DOM. As well Curly is an exploratin in the design and structure of software and how modern web frameworks function. While this project is not up to par with the likes of React, Vue, or Angular, it is something I am very proud of.",
           "Starting simply, Curly allows you to build websites/apps using nothing but structured JavaScript objects. These objects are completely self contained, incorporating styling, events, and anything else you could imagine. Because they are JavaScript objects you can use all of the functionality of JavaScript in your styling as well.",
@@ -26,13 +29,22 @@
         ]
       },
       {
+        "name": "Colors!",
+        "tech": "React, CSS",
+        "links":[
+          {"text": "live_link", "href": "https://evanmags.github.io/Colors-2/"},
+          {"text": "github", "href": "https://github.com/evanmags/Colors-2"}
+        ],
+        "description": ["This project was the very first that I ever built, and also the first that I decided to revamp when learning React. Colors is a color pallet building tool that allows fine tuning of a generated split complimentary color pallet."]
+      },
+      {
         "name": "Pixelator",
-        "langs": "React",
+        "tech": "React",
         "image": "",
-        "links": {
-          "live_link": "https://evanmags.github.io/pixelator/",
-          "github": "https://github.com/evanmags/pixelator"
-        },
+        "links":[
+          {"text": "live_link", "href": "https://evanmags.github.io/pixelator/"},
+          {"text": "github", "href": "https://github.com/evanmags/pixelator"}
+        ],
         "description": [
           "This was my first ever React project. A fun implementation of a pixel art editor that takes inspireation from the Etch-a-Sketch."
         ]
@@ -52,33 +64,95 @@
   "resume": {
     "education": {
       "formal": [
-        {"school":"St. John Fisher College", "degree":"B.S. Biology", "year": "2015"},
-        {"school":"SUNY Cortland", "degree":"M.S. Exercise Science", "year": "2018"},
-        {"school":"University at Buffalo", "degree":"B.S. Computer Science", "year": "Current"}
+        {
+          "school": "University at Buffalo",
+          "degree": "B.S. Computer Science",
+          "year": "Current"
+        },
+        {
+          "school": "SUNY Cortland",
+          "degree": "M.S. Exercise Science",
+          "year": "2018"
+        },
+        {
+          "school": "St. John Fisher College",
+          "degree": "B.S. Biology",
+          "year": "2015"
+        }
       ],
       "informal": [
-        {"class":"Web Developer Boot Camp", "instructor": "Colt Steele",  "org": "Udemy", "year": "2018"},
-        {"class":"cs50", "instructor": "David Malan",  "org": "Edx", "year": "2019"}
+        {
+          "class": "cs50",
+          "instructor": "HarvardX",
+          "org": "Edx",
+          "year": "2019"
+        },
+        {
+          "class": "Web Developer Boot Camp",
+          "instructor": "Colt Steele",
+          "org": "Udemy",
+          "year": "2018"
+        }
       ]
     },
     "work": [
-      {"title": "Head Coach for Cross Country and Track and Field", "employer": "SUNY Oswego", "dates": {"start": 2017, "end": 2019}},
-      {"title": "Assistant Coach for Cross Country and Track and Field", "employer": "SUNY Cortland", "dates": {"start": 2016, "end": 2017}},
-      {"title": "Sales Associate", "employer": "Finger Lakes Running Company", "dates": {"start": 2015, "end": 2017}}
+      {
+        "title": "Head Coach for Cross Country and Track and Field",
+        "employer": "SUNY Oswego",
+        "dates": { "start": 2017, "end": 2019 }
+      },
+      {
+        "title": "Assistant Coach for Cross Country and Track and Field",
+        "employer": "SUNY Cortland",
+        "dates": { "start": 2016, "end": 2017 }
+      },
+      {
+        "title": "Sales Associate",
+        "employer": "Finger Lakes Running Company",
+        "dates": { "start": 2015, "end": 2017 }
+      }
     ],
     "skills": [
-      {"skill": "JavaScript", "subskills": ["Node.js", "Express", "Jest", "React", "React-Router", "jQuery"]},
-      {"skill": "Python", "subskills": ["Flask", "Pytest"]},
-      {"skill": "CSS", "subskills": ["SCSS", "Sass", "BEM", "Bootstrap", "Semantic-ui"]},
-      {"skill": "HTML", "subskills": ["Pug", "EJS", "Jinja"]},
-      {"skill": "Database", "subskills": ["MongoDB", "SQL", "graphQL"]},
-      {"skill": "Other", "subskills": ["Git", "JSON", "Java", "C"]}
+      {
+        "skill": "JavaScript",
+        "subskills": [
+          "Node.js",
+          "Express",
+          "Jest",
+          "React",
+          "React-Router",
+          "jQuery"
+        ]
+      },
+      { "skill": "Python", "subskills": ["Flask", "Pytest"] },
+      {
+        "skill": "CSS",
+        "subskills": ["SCSS", "Sass", "BEM", "Bootstrap", "Semantic-ui"]
+      },
+      { "skill": "HTML", "subskills": ["Pug", "EJS", "Jinja"] },
+      { "skill": "Database", "subskills": ["MongoDB", "SQL", "graphQL"] },
+      { "skill": "Other", "subskills": ["Git", "JSON", "Java", "C"] }
     ],
     "contact": [
-      {"type": "email", "icon": "far fa-envelope", "method": "magnussen.evan@gmail.com", "href": "mailto:magnussen.evan@gmail.com"},
-      {"type": "phone", "icon": "fas fa-phone", "method": "(585) 519-5333"},
-      {"type": "github", "icon": "fab fa-github", "method": "evanmags", "href": "https://github.com/evanmags"},
-      {"type": "codepen", "icon": "fab fa-codepen", "method": "@emags112", "href": "https://codepen.io/emags112/"}
+      {
+        "type": "email",
+        "icon": "far fa-envelope",
+        "method": "magnussen.evan@gmail.com",
+        "href": "mailto:magnussen.evan@gmail.com"
+      },
+      { "type": "phone", "icon": "fas fa-phone", "method": "(585) 519-5333" },
+      {
+        "type": "github",
+        "icon": "fab fa-github",
+        "method": "evanmags",
+        "href": "https://github.com/evanmags"
+      },
+      {
+        "type": "codepen",
+        "icon": "fab fa-codepen",
+        "method": "@emags112",
+        "href": "https://codepen.io/emags112/"
+      }
     ]
   }
 }
