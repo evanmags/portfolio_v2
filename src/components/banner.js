@@ -30,7 +30,7 @@ function Menubar(props) {
   );
 }
 
-export class Banner extends Component {
+export default class Banner extends Component {
   constructor(props) {
     super(props);
     this.state = {

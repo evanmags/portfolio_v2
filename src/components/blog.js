@@ -2,11 +2,6 @@ import React, { Component } from "react";
 import Card from "./card";
 const cards = require("../data.json").blog.posts;
 
-// class BlogPost extends Component {
-//   render() {
-//     return <div />;
-//   }
-// }
 
 export default class Blog extends Component {
   constructor(props) {

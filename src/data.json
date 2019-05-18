@@ -48,5 +48,37 @@
         "date": "12/3/18"
       }
     ]
+  },
+  "resume": {
+    "education": {
+      "formal": [
+        {"school":"St. John Fisher College", "degree":"B.S. Biology", "year": "2015"},
+        {"school":"SUNY Cortland", "degree":"M.S. Exercise Science", "year": "2018"},
+        {"school":"University at Buffalo", "degree":"B.S. Computer Science", "year": "Current"}
+      ],
+      "informal": [
+        {"class":"Web Developer Boot Camp", "instructor": "Colt Steele",  "org": "Udemy", "year": "2018"},
+        {"class":"cs50", "instructor": "David Malan",  "org": "Edx", "year": "2019"}
+      ]
+    },
+    "work": [
+      {"title": "Head Coach for Cross Country and Track and Field", "employer": "SUNY Oswego", "dates": {"start": 2017, "end": 2019}},
+      {"title": "Assistant Coach for Cross Country and Track and Field", "employer": "SUNY Cortland", "dates": {"start": 2016, "end": 2017}},
+      {"title": "Sales Associate", "employer": "Finger Lakes Running Company", "dates": {"start": 2015, "end": 2017}}
+    ],
+    "skills": [
+      {"skill": "JavaScript", "subskills": ["Node.js", "Express", "Jest", "React", "React-Router", "jQuery"]},
+      {"skill": "Python", "subskills": ["Flask", "Pytest"]},
+      {"skill": "CSS", "subskills": ["SCSS", "Sass", "BEM", "Bootstrap", "Semantic-ui"]},
+      {"skill": "HTML", "subskills": ["Pug", "EJS", "Jinja"]},
+      {"skill": "Database", "subskills": ["MongoDB", "SQL", "graphQL"]},
+      {"skill": "Other", "subskills": ["Git", "JSON", "Java", "C"]}
+    ],
+    "contact": [
+      {"type": "email", "icon": "far fa-envelope", "method": "magnussen.evan@gmail.com", "href": "mailto:magnussen.evan@gmail.com"},
+      {"type": "phone", "icon": "fas fa-phone", "method": "(585) 519-5333"},
+      {"type": "github", "icon": "fab fa-github", "method": "evanmags", "href": "https://github.com/evanmags"},
+      {"type": "codepen", "icon": "fab fa-codepen", "method": "@emags112", "href": "https://codepen.io/emags112/"}
+    ]
   }
 }

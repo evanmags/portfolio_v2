@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,800');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
 // reset
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,98 +15,96 @@ $pop: #b1efd8;
 $pop_dark: #80baa4;
 
 // font variables
-// font-size variables
+$title: "Roboto Slab";
+$body: "Source Sans Pro";
 
-html{
+// extends variables
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+html {
   color: $text;
   background: $white;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $body, sans-serif;
   font-size: 16px;
 }
 
-#root{
+#root {
   display: flex;
   justify-content: center;
 }
 
-#App{
+#App {
   position: absolute;
   width: 100vw;
   max-width: 900px;
   min-height: 100vh;
-  padding:  0 5vh;
-  display: flex;
-  flex-direction: column;
+  padding: 0 5vh;
+  @extend %flex-column;
   justify-content: center;
 }
 
-@media only Screen and (min-width: 400px){
-  #App{
-    padding:  0 3vh;
+@media only Screen and (min-width: 400px) {
+  #App {
+    padding: 0 3vh;
   }
 }
 
-@media only Screen and (min-width: 800px){
-  #App{
+@media only Screen and (min-width: 800px) {
+  #App {
     padding: 0;
   }
 }
 
-.banner{
+.banner {
   height: 8.5rem;
   padding-bottom: 10px;
-  display: flex;
-  flex-direction: column;
+  @extend %flex-column;
   justify-content: space-evenly;
-
-  &__head{
-    font-family: "Roboto Slab";
+  &__head {
+    font-family: $title;
     font-size: 2rem;
     font-weight: 700;
   }
-
-  &__subhead{
+  &__subhead {
     font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
   }
-
-  &-pop .menubar:after{
+  &-pop .menubar:after {
     transform: scale(3, 500);
   }
-
-  &-pop .menubar:before{
+  &-pop .menubar:before {
     opacity: 1;
   }
-
-  &-pop .menubar__btn:after{
+  &-pop .menubar__btn:after {
     background: $white;
   }
 }
 
-.menubar{
+.menubar {
   height: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
-  &:after, &:before{
+  &:after,
+  &:before {
     position: absolute;
-    content: '';
+    content: "";
     height: 3px;
     width: calc(100% - 10vh);
     background: $pop;
-    transition: all .15s ease-in-out;
+    transition: all 0.15s ease-in-out;
     z-index: -2;
   }
-  
-  &:before{
+  &:before {
     background: $white;
     z-index: -1;
     opacity: 0;
   }
-
-  &__btn{
+  &__btn {
     position: relative;
     display: flex;
     justify-content: center;
@@ -115,9 +113,8 @@ html{
     color: $text;
     text-decoration: none;
     box-shadow: none;
-    transition: all .3s;
-
-    &:after{
+    transition: all 0.3s;
+    &:after {
       position: absolute;
       display: block;
       content: "";
@@ -126,96 +123,94 @@ html{
       opacity: 0;
       background: $pop;
       transform: translateY(20px) scaleX(0);
-      transition: all .2s;
+      transition: all 0.2s;
       z-index: -1;
     }
-
-    &:hover:after{
+    &:hover:after {
       opacity: 1;
       transform: translateY(7px) scaleX(1);
     }
   }
 }
 
-@media only Screen and (min-width: 400px){
-  .menubar{
-    &:after, &:before{
+@media only Screen and (min-width: 400px) {
+  .menubar {
+    &:after,
+    &:before {
       width: calc(100% - 6vh);
     }
-    &__btn{
+    &__btn {
       margin: 10px 0;
       flex: 0 1 50%;
     }
   }
 }
 
-@media only Screen and (min-width: 800px){
-  .menubar{
+@media only Screen and (min-width: 800px) {
+  .menubar {
     flex-wrap: nowrap;
-    &:after, &:before{
+    &:after,
+    &:before {
       width: 100%;
     }
-    &__btn{
+    &__btn {
       flex: 0 1 20%;
     }
   }
 }
 
-.blog{
+.blog {
   padding: 30px;
-  display: flex;
-  flex-direction: column;
+  @extend %flex-column;
   align-items: center;
 }
 
-.portfolio{
+.portfolio {
   padding: 30px;
-  display: flex;
-  flex-direction: column;
+  @extend %flex-column;
   align-items: stretch;
 }
 
-.card{
+.card {
   margin: 10px;
   padding: 15px 20px;
   box-shadow: 2px 2px 0 2px $pop;
   display: flex;
-  &__image{
+  &__image {
     flex: 30%;
   }
-  &__body{
+  &__body {
     flex: 70%;
-    display: flex;
-    flex-direction: column;
+    @extend %flex-column;
     justify-content: space-between;
   }
-  &__title{
+  &__title {
     margin-bottom: 5px;
     font-family: "Roboto Slab";
     text-transform: uppercase;
     font-weight: 800;
   }
-  &__info{
+  &__info {
     margin-bottom: 5px;
     font-size: 14px;
     font-style: italic;
     color: #999;
-    &-right{
+    &-right {
       align-self: flex-end;
     }
   }
-  &__description{
+  &__description {
     margin: 15px 0;
-    & p{
+    & p {
       margin: 10px 0;
     }
   }
-  &__footer{
+  &__footer {
     padding: 10px 0;
     display: flex;
     justify-content: flex-end;
   }
-  &__button{
+  &__button {
     margin: 0 10px;
     height: 15px;
     background: transparent;
@@ -223,9 +218,9 @@ html{
     border-radius: 0px;
     font-size: 14px;
     outline: #999;
-    &:after{
+    &:after {
       position: relative;
-      content: '';
+      content: "";
       display: block;
       height: 10px;
       width: 120%;
@@ -233,12 +228,58 @@ html{
       left: -10%;
       background: $pop;
       transform: scaleX(0);
-      transition: .2s;
+      transition: 0.2s;
       transform-origin: left;
       z-index: -1;
     }
-    &:hover:after{
+    &:hover:after {
       transform: scaleX(1);
+    }
+  }
+}
+
+.resume {
+  @extend %flex-column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &__item{
+    margin: 5px 0;
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    &__title{
+      width: 100%;
+    }
+    &__sub {
+      display: flex;
+      justify-content: space-between;
+      font-style: italic;
+      color: #999;
+    }
+  }
+  & .card{
+    box-shadow: none;
+  }
+  & .divider {
+    background: $pop;
+    margin: 10px 0;
+    &-horizontal{
+      margin: 10px auto;
+      align-self: center;
+      height: 3px;
+      width: 85%;
+    }
+    &-vertical{
+      flex: 0 0 3px;
+    }
+  }
+  & .row{
+    position: relative;
+    display: flex;
+    width: 100%;
+    & .card {
+      flex: 0 0 50%;
     }
   }
 }

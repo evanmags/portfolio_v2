@@ -1,11 +1,48 @@
 import React, { Component } from "react";
 
+function CardHead(props) {
+  return (
+    <div className="card__head">
+      <h2 className="card__title">{props.title}</h2>
+      <CardInfo info={props.info} />
+    </div>
+  );
+}
+
+function CardInfo(props) {
+  return props.info
+    ?(
+      <span className={"card__info " + (props.right && "card__info-right")}>
+        {props.info}
+      </span>
+    )
+    : '';
+}
+
 function CardLink(props) {
   return (
     <a href={props.href}>
       <button className="card__button">{props.text}</button>
     </a>
   );
+}
+
+function CardFooter(props) {
+  return props.links 
+    ? (
+      <div className="card__footer">
+        {props.links.live_link && (
+          <CardLink href={props.links.live_link} text="Live Site" />
+        )}
+        {props.links.github && (
+          <CardLink href={props.links.github} text="GitHub" />
+        )}
+        {props.links.post && (
+          <CardLink href={props.links.post} text="Read More!" />
+        )}
+      </div>
+    ) 
+    : "";
 }
 
 class Card extends Component {
@@ -16,31 +53,13 @@ class Card extends Component {
           <img className="card__image" src={this.props.image} alt="project" />
         )}
         <div className="card__body">
-          <div className="card__head">
-            <h2 className="card__title">{this.props.title}</h2>
-            <span className="card__info">
-              {this.props.date || this.props.langs}
-            </span>
-          </div>
+          <CardHead
+            title={this.props.title}
+            info={this.props.date || this.props.langs}
+          />
           <div className="card__description">{this.props.description}</div>
-          {this.props.length && (
-            <span className="card__info card__info-right">
-              {this.props.length}
-            </span>
-          )}
-          {this.props.links && (
-            <div className="card__footer">
-              {this.props.links.live_link && (
-                <CardLink href={this.props.links.live_link} text="Live Site" />
-              )}
-              {this.props.links.github && (
-                <CardLink href={this.props.links.github} text="GitHub" />
-              )}
-              {this.props.links.post && (
-                <CardLink href={this.props.links.post} text="Read More!" />
-              )}
-            </div>
-          )}
+          <CardInfo info={this.props.length} right={true} />
+          <CardFooter links={this.props.links} />
         </div>
       </div>
     );

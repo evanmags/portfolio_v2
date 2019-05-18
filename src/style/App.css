@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+.resume, .card__body, .portfolio, .blog, .banner, #App {
+  display: flex;
+  flex-direction: column;
+}
+
 html {
   color: #333;
   background: #f8f8f8;
@@ -24,8 +29,6 @@ html {
   max-width: 900px;
   min-height: 100vh;
   padding: 0 5vh;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
@@ -42,8 +45,6 @@ html {
 .banner {
   height: 8.5rem;
   padding-bottom: 10px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
 }
 .banner__head {
@@ -136,15 +137,11 @@ html {
 }
 .blog {
   padding: 30px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
 .portfolio {
   padding: 30px;
-  display: flex;
-  flex-direction: column;
   align-items: stretch;
 }
 
@@ -159,8 +156,6 @@ html {
 }
 .card__body {
   flex: 70%;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
 .card__title {
@@ -214,6 +209,51 @@ html {
 }
 .card__button:hover:after {
   transform: scaleX(1);
+}
+
+.resume {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.resume__item {
+  margin: 5px 0;
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+}
+.resume__item__title {
+  width: 100%;
+}
+.resume__item__sub {
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+  color: #999;
+}
+.resume .card {
+  box-shadow: none;
+}
+.resume .divider {
+  background: #b1efd8;
+  margin: 10px 0;
+}
+.resume .divider-horizontal {
+  margin: 10px auto;
+  align-self: center;
+  height: 3px;
+  width: 85%;
+}
+.resume .divider-vertical {
+  flex: 0 0 3px;
+}
+.resume .row {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.resume .row .card {
+  flex: 0 0 50%;
 }
 
 /*# sourceMappingURL=App.css.map */
