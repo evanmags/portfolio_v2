@@ -39,7 +39,6 @@ html {
 }
 
 #root {
-  min-height: 100vh;
   padding: 5vh 0 2vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,11 +51,13 @@ html {
           align-items: center;
 }
 
-#App {
+#App{
   position: relative;
+  min-height: 95vh;
   width: 100vw;
   max-width: 900px;
-  padding: 0 5vh;
+  padding: 0vh 5vh 5vh 0vh;
+  justify-content: center;
   @extend %flex-column;
 }
 
@@ -68,7 +69,8 @@ html {
 
 @media only Screen and (min-width: 800px) {
   #App {
-    padding: 0;
+    min-height: 93vh;
+    padding: 0 0 2vh 0;
   }
 }
 
@@ -467,14 +469,15 @@ html {
 }
 
 .footer{
-  position: relative;
+  color: $text_muted;
+  position: absolute;
   bottom: 0;
-  margin-top: 30px;
   width: 100%;
   display: flex;
   justify-content: center;
+  z-index: 2;
   &__link{
-    color: $text;
+    color: $text_muted;
     margin: 0 5px;
     &:hover, &:focus{
       color: $pop;
