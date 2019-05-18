@@ -1,7 +1,7 @@
 {
   "name": "portfolio_v2",
   "version": "0.1.0",
-  "homepage": "http://evanmagnussen.com",
+  "homepage": "https://evanmagnussen.com/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",

@@ -40,7 +40,7 @@ export default class Banner extends Component {
     this.mouseleave = this.mouseleave.bind(this);
   }
   mouseenter() {
-    if (window.location.pathname === `/portfolio_v2/` && !isMobile.any()) {
+    if (window.location.hash === `#/` && !isMobile.any()) {
       this.setState({ class: "banner banner-pop" });
     }
   }
