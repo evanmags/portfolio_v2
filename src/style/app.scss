@@ -40,7 +40,7 @@ html {
 
 #root {
   min-height: 100vh;
-  padding: 5vh 0;
+  padding: 5vh 0 2vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -463,5 +463,21 @@ html {
   }
   & i{
     margin-right: 5px;
+  }
+}
+
+.footer{
+  position: relative;
+  bottom: 0;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  &__link{
+    color: $text;
+    margin: 0 5px;
+    &:hover, &:focus{
+      color: $pop;
+    }
   }
 }

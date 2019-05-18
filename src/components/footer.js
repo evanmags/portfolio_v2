@@ -15,7 +15,7 @@ function Contact() {
 export default class Footer extends Component {
   render(){
     return (
-      <footer>
+      <footer className="footer">
         <div>
           <span>© 2019 Evan Magnussen | </span><Contact />
         </div>
