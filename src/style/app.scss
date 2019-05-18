@@ -29,8 +29,7 @@ html {
   color: $text;
   background: $white;
   font-family: $body, sans-serif;
-  font-size: 16px;
-}
+  font-size: 16px;}
 
 #root {
   min-height: 100vh;
@@ -46,7 +45,6 @@ html {
   max-width: 900px;
   padding: 0 5vh;
   @extend %flex-column;
-  overflow: hidden;
 }
 
 @media only Screen and (min-width: 400px) {

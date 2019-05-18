@@ -31,7 +31,6 @@ html {
   width: 100vw;
   max-width: 900px;
   padding: 0 5vh;
-  overflow: hidden;
 }
 
 @media only Screen and (min-width: 400px) {
