@@ -6,13 +6,13 @@ function MenuBtn(props) {
   if (props.internal) {
     return (
       <Link id={props.text} className="menubar__btn" to={props.href || "#"}>
-        {props.text}
+        <span className="menubar__btn__text">{props.text}</span>
       </Link>
     );
   } else {
     return (
       <a id={props.text} className="menubar__btn" href={props.href || "#"}>
-        {props.text}
+        <span className="menubar__btn__text">{props.text}</span>
       </a>
     );
   }
