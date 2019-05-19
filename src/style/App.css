@@ -244,6 +244,9 @@ html {
   text-transform: uppercase;
   font-weight: 800;
 }
+.card__title::first-letter {
+  text-decoration: underline #b1efd8;
+}
 .card__info {
   margin-bottom: 5px;
   font-size: 14px;
