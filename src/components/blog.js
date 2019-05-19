@@ -12,7 +12,7 @@ export default class Blog extends Component {
     return cards.map(card => (
       <Card
         title={card.title}
-        date={card.date}
+        info={card.date}
         description={card.description}
         length={card.length}
         key={card.title}

@@ -17,7 +17,7 @@ export default class Portfolio extends Component {
         <Card
           key={project.name}
           title={project.name}
-          tech={project.tech}
+          info={project.tech}
           image={project.image}
           links={project.links}
           description={project.description.map(p => (

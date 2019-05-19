@@ -347,11 +347,34 @@ html {
 
 .edu{
   @extend %flex-column;
-  
   &__head{
     margin: auto;
     padding: 0 10px 3px;
     border-bottom: 2px solid $pop;
+  }
+}
+
+.privacy{
+  @extend %flex-column;
+  text-align: center;
+  &__head{
+    margin: 20px auto 0;
+    padding: 0 10px 3px;
+    border-bottom: 2px solid $pop;
+  }
+  &__link{
+    text-decoration: none;
+    padding: 0 5px;
+    position: relative;
+    color: $text;
+    display: inline-block;
+    background-image: linear-gradient(to bottom, $pop, $pop);
+    background-repeat: no-repeat;
+    background-position: 0% .85rem;
+    transition: background .2s;
+    &:hover, &:focus{
+      background-position: 0% 0rem;
+    }
   }
 }
 
@@ -479,6 +502,7 @@ html {
 }
 
 .footer{
+  font-size: 13px;
   color: $text_muted;
   position: absolute;
   bottom: 0;
@@ -487,6 +511,7 @@ html {
   justify-content: center;
   z-index: 2;
   &__link{
+    text-decoration: none;
     color: $text_muted;
     margin: 0 5px;
     &:hover, &:focus{

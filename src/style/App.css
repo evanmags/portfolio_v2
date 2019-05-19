@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-.resume, .edu, .card__description, .portfolio, .blog, .banner, #App {
+.resume, .privacy, .edu, .card__description, .portfolio, .blog, .banner, #App {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,6 +319,29 @@ html {
   border-bottom: 2px solid #b1efd8;
 }
 
+.privacy {
+  text-align: center;
+}
+.privacy__head {
+  margin: 20px auto 0;
+  padding: 0 10px 3px;
+  border-bottom: 2px solid #b1efd8;
+}
+.privacy__link {
+  text-decoration: none;
+  padding: 0 5px;
+  position: relative;
+  color: #333;
+  display: inline-block;
+  background-image: linear-gradient(to bottom, #b1efd8, #b1efd8);
+  background-repeat: no-repeat;
+  background-position: 0% 0.85rem;
+  transition: background 0.2s;
+}
+.privacy__link:hover, .privacy__link:focus {
+  background-position: 0% 0rem;
+}
+
 .resume {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -442,6 +465,7 @@ html {
 }
 
 .footer {
+  font-size: 13px;
   color: #767676;
   position: absolute;
   bottom: 0;
@@ -451,6 +475,7 @@ html {
   z-index: 2;
 }
 .footer__link {
+  text-decoration: none;
   color: #767676;
   margin: 0 5px;
 }

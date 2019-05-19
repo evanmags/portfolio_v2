@@ -39,6 +39,12 @@ function CardFooter(props) {
     : "";
 }
 
+  /* *
+  *
+  * Accepts: image, title, info, description, length, links
+  * 
+  * */
+
 class Card extends Component {
   render() {
     return (
@@ -49,7 +55,7 @@ class Card extends Component {
         <div className="card__body">
           <CardHead
             title={this.props.title}
-            info={this.props.date || this.props.tech}
+            info={this.props.info}
           />
           <div className="card__description">{this.props.description}</div>
           <CardInfo info={this.props.length} right={true} />
