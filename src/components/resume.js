@@ -40,11 +40,10 @@ function Education() {
     );
   });
   const body = (
-    <div>
-      <h3>Formal</h3>
+    <div className="edu">
+      <h3 className="edu__head">Formal</h3>
       {formalEDU}
-      <Divider direction="horizontal" />
-      <h3>Informal</h3>
+      <h3 className="edu__head">Informal</h3>
       {informalEDU}
     </div>
   );

@@ -345,6 +345,16 @@ html {
   }
 }
 
+.edu{
+  @extend %flex-column;
+  
+  &__head{
+    margin: auto;
+    padding: 0 10px 3px;
+    border-bottom: 2px solid $pop;
+  }
+}
+
 .resume {
   @extend %flex-column;
   -webkit-box-pack: center;

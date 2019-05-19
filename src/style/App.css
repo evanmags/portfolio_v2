@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-.resume, .card__description, .portfolio, .blog, .banner, #App {
+.resume, .edu, .card__description, .portfolio, .blog, .banner, #App {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,6 +313,12 @@ html {
     padding: 0 15px;
   }
 }
+.edu__head {
+  margin: auto;
+  padding: 0 10px 3px;
+  border-bottom: 2px solid #b1efd8;
+}
+
 .resume {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
