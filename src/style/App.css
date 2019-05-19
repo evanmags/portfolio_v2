@@ -240,7 +240,7 @@ html {
   margin-bottom: 5px;
   font-size: 14px;
   font-style: italic;
-  color: #767676;
+  color: #727272;
 }
 .card__info-right {
   -ms-flex-item-align: end;
@@ -272,7 +272,7 @@ html {
   border: none;
   border-radius: 0px;
   font-size: 14px;
-  outline: #767676;
+  outline: #727272;
 }
 .card__button:after {
   position: relative;
@@ -372,7 +372,7 @@ html {
   -ms-flex-pack: justify;
   justify-content: space-between;
   font-style: italic;
-  color: #767676;
+  color: #727272;
 }
 .resume .card {
   -webkit-box-shadow: none;
@@ -466,7 +466,7 @@ html {
 
 .footer {
   font-size: 13px;
-  color: #767676;
+  color: #727272;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -476,7 +476,7 @@ html {
 }
 .footer__link {
   text-decoration: none;
-  color: #767676;
+  color: #727272;
   margin: 0 5px;
 }
 .footer__link:hover, .footer__link:focus {
