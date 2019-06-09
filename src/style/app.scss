@@ -58,7 +58,9 @@ html {
   width: 100vw;
   max-width: 900px;
   padding: 0vh 5vh 5vh 5vh;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   @extend %flex-column;
 }
 
@@ -71,7 +73,7 @@ html {
 @media only Screen and (min-width: 800px) {
   #App {
     min-height: 93vh;
-    padding: 0 0 2vh 0;
+    padding: 0 0 5vh 0;
   }
 }
 
@@ -152,6 +154,8 @@ html {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     &__text{
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
       position: relative;
       &:after {
@@ -271,9 +275,12 @@ html {
     font-family: "Roboto Slab";
     text-transform: uppercase;
     font-weight: 800;
-    &::first-letter{
-      text-decoration: underline $pop;
-    }
+    // optional, i like that it breaks up the black blocks 
+    // but it also feels like too much
+  &::first-letter{
+    -webkit-text-decoration: underline $pop;
+            text-decoration: underline $pop;
+  }
   }
   &__info {
     margin-bottom: 5px;
@@ -378,9 +385,11 @@ html {
     position: relative;
     color: $text;
     display: inline-block;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($pop), to($pop));
     background-image: linear-gradient(to bottom, $pop, $pop);
     background-repeat: no-repeat;
     background-position: 0% .85rem;
+    -webkit-transition: background .2s;
     transition: background .2s;
     &:hover, &:focus{
       background-position: 0% 0rem;
@@ -475,7 +484,9 @@ html {
 .contact__method{
   -ms-flex-item-align: start;
       align-self: flex-start;
-  flex-grow: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
   & a {
     position: relative;
     text-decoration: none;
@@ -517,8 +528,12 @@ html {
   position: absolute;
   bottom: 0;
   width: calc(100% - 5vh);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 2;
   &__link{
     text-decoration: none;

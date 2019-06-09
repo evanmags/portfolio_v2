@@ -44,6 +44,8 @@ html {
   width: 100vw;
   max-width: 900px;
   padding: 0vh 5vh 5vh 5vh;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -55,7 +57,7 @@ html {
 @media only Screen and (min-width: 800px) {
   #App {
     min-height: 93vh;
-    padding: 0 0 2vh 0;
+    padding: 0 0 5vh 0;
   }
 }
 .banner {
@@ -135,6 +137,8 @@ html {
   transition: all 0.3s;
 }
 .menubar__btn__text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
 }
@@ -245,6 +249,7 @@ html {
   font-weight: 800;
 }
 .card__title::first-letter {
+  -webkit-text-decoration: underline #b1efd8;
   text-decoration: underline #b1efd8;
 }
 .card__info {
@@ -343,9 +348,11 @@ html {
   position: relative;
   color: #333;
   display: inline-block;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b1efd8), to(#b1efd8));
   background-image: linear-gradient(to bottom, #b1efd8, #b1efd8);
   background-repeat: no-repeat;
   background-position: 0% 0.85rem;
+  -webkit-transition: background 0.2s;
   transition: background 0.2s;
 }
 .privacy__link:hover, .privacy__link:focus {
@@ -438,6 +445,8 @@ html {
 .contact__method {
   -ms-flex-item-align: start;
   align-self: flex-start;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
   flex-grow: 0;
 }
 .contact__method a {
@@ -480,7 +489,11 @@ html {
   position: absolute;
   bottom: 0;
   width: calc(100% - 5vh);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   z-index: 2;
 }
